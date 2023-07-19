@@ -376,6 +376,21 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             </geometry>
         </collision>
     </link>
+    <!-- <link name="user_rail_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="package://husky_description/meshes/user_rail.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="package://husky_description/meshes/user_rail.obj" />
+            </geometry>
+        </collision>
+    </link> -->
+
 
     <!-- Attach top plate -->
     <joint name="top_plate_joint" type="fixed">
@@ -388,6 +403,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <child link="ipad_rack_link" />
         <origin rpy="0 0 0" xyz="0.0812 0 0.225" />
     </joint>
+    <!-- <joint name="user_rail" type="fixed">
+        <parent link="base_link" />
+        <child link="user_rail_link" />
+        <origin xyz="0.272 0 0.245" rpy="0 0 0" />
+    </joint> -->
+
 
     <!-- Top plate front link -->
     <joint name="top_plate_front_joint" type="fixed">
