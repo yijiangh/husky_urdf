@@ -360,14 +360,35 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <mass value="0.1" />
             <inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0.0" ixz="0.0" iyz="0.0" />
         </inertial>
-
     </link>
+
+    <link name="ipad_rack_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="package://husky_description/meshes/ipad_rack_visual.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <mesh filename="package://husky_description/meshes/ipad_rack_collision.obj" />
+            </geometry>
+        </collision>
+    </link>
+
     <!-- Attach top plate -->
     <joint name="top_plate_joint" type="fixed">
         <parent link="base_link" />
         <child link="top_plate_link" />
         <origin rpy="0 0 0" xyz="0.0812 0 0.225" />
     </joint>
+    <joint name="ipad_rack_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="ipad_rack_link" />
+        <origin rpy="0 0 0" xyz="0.0812 0 0.225" />
+    </joint>
+
     <!-- Top plate front link -->
     <joint name="top_plate_front_joint" type="fixed">
         <parent link="top_plate_link" />
