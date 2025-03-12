@@ -836,7 +836,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <!-- * bar grasp TCP -->
     <link name="bar_tcp"/>
     <joint name="tool0-bar_tcp_fixed_joint" type="fixed">
-      <origin rpy="0 0 3.141592653589793" xyz="0 0 0.138"/>
+      <origin rpy="0 0 3.141592653589793" xyz="0 0 0.152"/>
       <parent link="robotiq_85_mount"/>
       <child link="bar_tcp"/>
     </joint>
