@@ -49,6 +49,14 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <material name="red">
         <color rgba="1.0 0.0 0.0 1.0" />
     </material>
+
+    <link name="world_link"/>
+    <joint name="world_footprint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <parent link="world_link"/>
+      <child link="base_footprint"/>
+    </joint>
+
     <!-- Base link is the center of the robot's bottom plate -->
     <link name="base_link">
         <visual>
@@ -80,8 +88,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <link name="base_footprint" />
     <joint name="base_footprint_joint" type="fixed">
         <origin rpy="0 0 0" xyz="0 0 -0.13228" />
-        <parent link="base_link" />
-        <child link="base_footprint" />
+        <parent link="base_footprint" />
+        <child link="base_link" />
     </joint>
     <!-- Inertial link stores the robot's inertial information -->
     <link name="inertial_link">
