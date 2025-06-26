@@ -84,10 +84,11 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         </inertial>
 
     </link>
+
     <!-- Base footprint is on the ground under the robot -->
     <link name="base_footprint" />
     <joint name="base_footprint_joint" type="fixed">
-        <origin rpy="0 0 0" xyz="0 0 -0.13228" />
+        <origin rpy="0 0 0" xyz="0 0 0.13228" />
         <parent link="base_footprint" />
         <child link="base_link" />
     </joint>
@@ -764,7 +765,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
            to correctly align 'base' with the 'Base' coordinate system of
            the UR controller.
       -->
-        <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
+        <!-- <origin rpy="0 0 3.14159265359" xyz="0 0 0" /> -->
+        <origin rpy="0 0 -1.570796326795" xyz="0 0 0" />
         <parent link="right_ur_arm_base_link" />
         <child link="right_ur_arm_base" />
     </joint>
@@ -1073,6 +1075,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
            Use the joint between 'base_link' and 'base_link_inertia' (a dummy
            link/frame) to introduce the necessary rotation over Z (of pi rad).
       -->
+        <!-- <origin rpy="0 0 -1.570796326795" xyz="0 0 0" /> -->
         <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
     </joint>
     <joint name="left_ur_arm_shoulder_pan_joint" type="revolute">
