@@ -3,8 +3,7 @@ import math
 import numpy as np
 import random
 import pybullet_planning as pp
-from compas.robots import RobotModel
-from compas_fab.robots import Robot
+from compas_robots import RobotModel
 
 def get_bar_grasp_gen_fn(bar_length, tool_pose=pp.unit_pose(), reverse_grasp=False, safety_margin_length=0.0):
     """[summary]

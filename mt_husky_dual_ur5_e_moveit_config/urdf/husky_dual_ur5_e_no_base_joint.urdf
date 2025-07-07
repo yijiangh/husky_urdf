@@ -115,7 +115,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <parent link="base_link" />
         <child link="imu_link" />
     </joint>
-    <gazebo reference="imu_link" />
+    <!-- <gazebo reference="imu_link" /> -->
 
     <link name="front_left_wheel_link">
         
@@ -139,20 +139,20 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         </collision>
     </link>
 
-    <gazebo reference="front_left_wheel_link">
+    <!-- <gazebo reference="front_left_wheel_link">
         <mu1 value="1.0" />
         <mu2 value="1.0" />
         <kp value="10000000.0" />
         <kd value="1.0" />
         <fdir1 value="1 0 0" />
-    </gazebo>
-    <joint name="front_left_wheel" type="continuous">
+    </gazebo> -->
+    <joint name="front_left_wheel" type="fixed">
         <parent link="base_link" />
         <child link="front_left_wheel_link" />
         <origin rpy="0 0 0" xyz="0.256 0.2854 0.03282" />
         <axis rpy="0 0 0" xyz="0 1 0" />
     </joint>
-    <transmission name="front_left_wheel_trans" type="SimpleTransmission">
+    <!-- <transmission name="front_left_wheel_trans" type="SimpleTransmission">
         <type>transmission_interface/SimpleTransmission</type>
         <actuator name="front_left_wheel_motor">
             <mechanicalReduction>1</mechanicalReduction>
@@ -160,7 +160,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <joint name="front_left_wheel">
             <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
         </joint>
-    </transmission>
+    </transmission> -->
     <link name="front_right_wheel_link">
         
 <inertial>
@@ -182,20 +182,21 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             </geometry>
         </collision>
     </link>
-    <gazebo reference="front_right_wheel_link">
+
+    <!-- <gazebo reference="front_right_wheel_link">
         <mu1 value="1.0" />
         <mu2 value="1.0" />
         <kp value="10000000.0" />
         <kd value="1.0" />
         <fdir1 value="1 0 0" />
-    </gazebo>
-    <joint name="front_right_wheel" type="continuous">
+    </gazebo> -->
+    <joint name="front_right_wheel" type="fixed">
         <parent link="base_link" />
         <child link="front_right_wheel_link" />
         <origin rpy="0 0 0" xyz="0.256 -0.2854 0.03282" />
         <axis rpy="0 0 0" xyz="0 1 0" />
     </joint>
-    <transmission name="front_right_wheel_trans" type="SimpleTransmission">
+    <!-- <transmission name="front_right_wheel_trans" type="SimpleTransmission">
         <type>transmission_interface/SimpleTransmission</type>
         <actuator name="front_right_wheel_motor">
             <mechanicalReduction>1</mechanicalReduction>
@@ -203,7 +204,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <joint name="front_right_wheel">
             <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
         </joint>
-    </transmission>
+    </transmission> -->
     <link name="rear_left_wheel_link">
         
 <inertial>
@@ -225,20 +226,21 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             </geometry>
         </collision>
     </link>
-    <gazebo reference="rear_left_wheel_link">
+
+    <!-- <gazebo reference="rear_left_wheel_link">
         <mu1 value="1.0" />
         <mu2 value="1.0" />
         <kp value="10000000.0" />
         <kd value="1.0" />
         <fdir1 value="1 0 0" />
-    </gazebo>
-    <joint name="rear_left_wheel" type="continuous">
+    </gazebo> -->
+    <joint name="rear_left_wheel" type="fixed">
         <parent link="base_link" />
         <child link="rear_left_wheel_link" />
         <origin rpy="0 0 0" xyz="-0.256 0.2854 0.03282" />
         <axis rpy="0 0 0" xyz="0 1 0" />
     </joint>
-    <transmission name="rear_left_wheel_trans" type="SimpleTransmission">
+    <!-- <transmission name="rear_left_wheel_trans" type="SimpleTransmission">
         <type>transmission_interface/SimpleTransmission</type>
         <actuator name="rear_left_wheel_motor">
             <mechanicalReduction>1</mechanicalReduction>
@@ -246,7 +248,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <joint name="rear_left_wheel">
             <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
         </joint>
-    </transmission>
+    </transmission> -->
     <link name="rear_right_wheel_link">
         
 <inertial>
@@ -268,20 +270,21 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             </geometry>
         </collision>
     </link>
-    <gazebo reference="rear_right_wheel_link">
+
+    <!-- <gazebo reference="rear_right_wheel_link">
         <mu1 value="1.0" />
         <mu2 value="1.0" />
         <kp value="10000000.0" />
         <kd value="1.0" />
         <fdir1 value="1 0 0" />
-    </gazebo>
-    <joint name="rear_right_wheel" type="continuous">
+    </gazebo> -->
+    <joint name="rear_right_wheel" type="fixed">
         <parent link="base_link" />
         <child link="rear_right_wheel_link" />
-        <origin rpy="0 0 0" xyz="-0.256 -0.2854 0.03282" />
+        <origin rpy="0 0 3.14159" xyz="-0.48 0 0.091" />
         <axis rpy="0 0 0" xyz="0 1 0" />
     </joint>
-    <transmission name="rear_right_wheel_trans" type="SimpleTransmission">
+    <!-- <transmission name="rear_right_wheel_trans" type="SimpleTransmission">
         <type>transmission_interface/SimpleTransmission</type>
         <actuator name="rear_right_wheel_motor">
             <mechanicalReduction>1</mechanicalReduction>
@@ -289,7 +292,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <joint name="rear_right_wheel">
             <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
         </joint>
-    </transmission>
+    </transmission> -->
     <!-- Spawn Husky chassis -->
     <link name="top_chassis_link">
         <visual>
@@ -331,12 +334,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <parent link="base_link" />
         <child link="rear_bumper_link" />
     </joint>
-    <gazebo>
+    <!-- <gazebo>
         <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
             <robotNamespace>/</robotNamespace>
             <legacyModeNS>true</legacyModeNS>
         </plugin>
-    </gazebo>
+    </gazebo> -->
     <gazebo>
         <plugin filename="libhector_gazebo_ros_imu.so" name="imu_controller">
             <robotNamespace>/</robotNamespace>
@@ -473,7 +476,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
           package. Users CANNOT rely on this file being available, or stored in
           this location. Nor can they rely on the existence of the macro.
   -->
-    <transmission name="right_ur_arm_shoulder_pan_trans">
+    <!-- <transmission name="right_ur_arm_shoulder_pan_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_ur_arm_shoulder_pan_joint">
             <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -481,8 +484,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <actuator name="right_ur_arm_shoulder_pan_motor">
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="right_ur_arm_shoulder_lift_trans">
+    </transmission> -->
+    <!-- <transmission name="right_ur_arm_shoulder_lift_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_ur_arm_shoulder_lift_joint">
             <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -490,8 +493,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <actuator name="right_ur_arm_shoulder_lift_motor">
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="right_ur_arm_elbow_trans">
+    </transmission> -->
+    <!-- <transmission name="right_ur_arm_elbow_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_ur_arm_elbow_joint">
             <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -499,8 +502,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <actuator name="right_ur_arm_elbow_motor">
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="right_ur_arm_wrist_1_trans">
+    </transmission> -->
+    <!-- <transmission name="right_ur_arm_wrist_1_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_ur_arm_wrist_1_joint">
             <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -508,8 +511,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <actuator name="right_ur_arm_wrist_1_motor">
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="right_ur_arm_wrist_2_trans">
+    </transmission> -->
+    <!-- <transmission name="right_ur_arm_wrist_2_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_ur_arm_wrist_2_joint">
             <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -517,8 +520,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <actuator name="right_ur_arm_wrist_2_motor">
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="right_ur_arm_wrist_3_trans">
+    </transmission> -->
+    <!-- <transmission name="right_ur_arm_wrist_3_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_ur_arm_wrist_3_joint">
             <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -526,7 +529,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <actuator name="right_ur_arm_wrist_3_motor">
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
+    </transmission> -->
     <!-- links: main serial chain -->
     <link name="right_ur_arm_base_link" />
     <link name="right_ur_arm_base_link_inertia">
@@ -707,7 +710,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
            Use the joint between 'base_link' and 'base_link_inertia' (a dummy
            link/frame) to introduce the necessary rotation over Z (of pi rad).
       -->
-        <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
+        <!-- <origin rpy="0 0 3.14159265359" xyz="0 0 0" /> -->
+        <origin rpy="0 0 -1.570796326795" xyz="0 0 0" />
     </joint>
     <joint name="right_ur_arm_shoulder_pan_joint" type="revolute">
         <parent link="right_ur_arm_base_link_inertia" />
@@ -841,7 +845,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
           package. Users CANNOT rely on this file being available, or stored in
           this location. Nor can they rely on the existence of the macro.
   -->
-    <transmission name="left_ur_arm_shoulder_pan_trans">
+    <!-- <transmission name="left_ur_arm_shoulder_pan_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_ur_arm_shoulder_pan_joint">
             <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -849,8 +853,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <actuator name="left_ur_arm_shoulder_pan_motor">
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="left_ur_arm_shoulder_lift_trans">
+    </transmission> -->
+    <!-- <transmission name="left_ur_arm_shoulder_lift_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_ur_arm_shoulder_lift_joint">
             <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -858,8 +862,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <actuator name="left_ur_arm_shoulder_lift_motor">
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="left_ur_arm_elbow_trans">
+    </transmission> -->
+    <!-- <transmission name="left_ur_arm_elbow_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_ur_arm_elbow_joint">
             <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -867,8 +871,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <actuator name="left_ur_arm_elbow_motor">
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="left_ur_arm_wrist_1_trans">
+    </transmission> -->
+    <!-- <transmission name="left_ur_arm_wrist_1_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_ur_arm_wrist_1_joint">
             <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -876,8 +880,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <actuator name="left_ur_arm_wrist_1_motor">
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="left_ur_arm_wrist_2_trans">
+    </transmission> -->
+    <!-- <transmission name="left_ur_arm_wrist_2_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_ur_arm_wrist_2_joint">
             <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -885,8 +889,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <actuator name="left_ur_arm_wrist_2_motor">
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="left_ur_arm_wrist_3_trans">
+    </transmission> -->
+    <!-- <transmission name="left_ur_arm_wrist_3_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_ur_arm_wrist_3_joint">
             <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -894,7 +898,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <actuator name="left_ur_arm_wrist_3_motor">
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
+    </transmission> -->
     <!-- links: main serial chain -->
     <link name="left_ur_arm_base_link" />
     <link name="left_ur_arm_base_link_inertia">
@@ -1158,7 +1162,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
        husky.urdf.xacro. If a robot is being customized and requires
        additional URDF, set the HUSKY_URDF_EXTRAS environment variable
        to the full path of the file you would like included. -->
-    <transmission name="trans_front_left_wheel">
+    <!-- <transmission name="trans_front_left_wheel">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="front_left_wheel">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1167,8 +1171,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_front_right_wheel">
+    </transmission> -->
+    <!-- <transmission name="trans_front_right_wheel">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="front_right_wheel">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1177,8 +1181,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_rear_left_wheel">
+    </transmission> -->
+    <!-- <transmission name="trans_rear_left_wheel">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="rear_left_wheel">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1187,8 +1191,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_rear_right_wheel">
+    </transmission> -->
+    <!-- <transmission name="trans_rear_right_wheel">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="rear_right_wheel">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1197,8 +1201,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_right_ur_arm_shoulder_pan_joint">
+    </transmission> -->
+    <!-- <transmission name="trans_right_ur_arm_shoulder_pan_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_ur_arm_shoulder_pan_joint">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1207,8 +1211,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_right_ur_arm_shoulder_lift_joint">
+    </transmission> -->
+    <!-- <transmission name="trans_right_ur_arm_shoulder_lift_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_ur_arm_shoulder_lift_joint">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1217,8 +1221,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_right_ur_arm_elbow_joint">
+    </transmission> -->
+    <!-- <transmission name="trans_right_ur_arm_elbow_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_ur_arm_elbow_joint">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1227,8 +1231,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_right_ur_arm_wrist_1_joint">
+    </transmission> -->
+    <!-- <transmission name="trans_right_ur_arm_wrist_1_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_ur_arm_wrist_1_joint">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1237,8 +1241,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_right_ur_arm_wrist_2_joint">
+    </transmission> -->
+    <!-- <transmission name="trans_right_ur_arm_wrist_2_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_ur_arm_wrist_2_joint">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1247,8 +1251,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_right_ur_arm_wrist_3_joint">
+    </transmission> -->
+    <!-- <transmission name="trans_right_ur_arm_wrist_3_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_ur_arm_wrist_3_joint">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1257,8 +1261,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_left_ur_arm_shoulder_pan_joint">
+    </transmission> -->
+    <!-- <transmission name="trans_left_ur_arm_shoulder_pan_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_ur_arm_shoulder_pan_joint">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1267,8 +1271,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_left_ur_arm_shoulder_lift_joint">
+    </transmission> -->
+    <!-- <transmission name="trans_left_ur_arm_shoulder_lift_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_ur_arm_shoulder_lift_joint">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1277,8 +1281,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_left_ur_arm_elbow_joint">
+    </transmission> -->
+    <!-- <transmission name="trans_left_ur_arm_elbow_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_ur_arm_elbow_joint">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1287,8 +1291,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_left_ur_arm_wrist_1_joint">
+    </transmission> -->
+    <!-- <transmission name="trans_left_ur_arm_wrist_1_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_ur_arm_wrist_1_joint">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1297,8 +1301,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_left_ur_arm_wrist_2_joint">
+    </transmission> -->
+    <!-- <transmission name="trans_left_ur_arm_wrist_2_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_ur_arm_wrist_2_joint">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1307,8 +1311,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <transmission name="trans_left_ur_arm_wrist_3_joint">
+    </transmission> -->
+    <!-- <transmission name="trans_left_ur_arm_wrist_3_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_ur_arm_wrist_3_joint">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -1317,11 +1321,6 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
-    <gazebo>
-        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-            <robotNamespace>/</robotNamespace>
-        </plugin>
-    </gazebo>
+    </transmission> -->
 
 </robot> 
