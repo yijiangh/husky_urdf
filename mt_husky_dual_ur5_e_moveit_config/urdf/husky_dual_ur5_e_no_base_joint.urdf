@@ -743,7 +743,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <child link="right_ur_arm_wrist_1_link" />
         <origin rpy="0 0 0" xyz="-0.3922 0 0.1333" />
         <axis xyz="0 0 1" />
-        <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" />
+        <limit effort="28.0" lower="-4.18879020479" upper="4.18879020479" velocity="3.14159265359" />
         <dynamics damping="0" friction="0" />
     </joint>
     <joint name="right_ur_arm_wrist_2_joint" type="revolute">
@@ -751,7 +751,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <child link="right_ur_arm_wrist_2_link" />
         <origin rpy="1.570796327 0 0" xyz="0 -0.0997 -2.0448811823e-11" />
         <axis xyz="0 0 1" />
-        <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" />
+        <limit effort="28.0" lower="-4.18879020479" upper="4.18879020479" velocity="3.14159265359" />
         <dynamics damping="0" friction="0" />
     </joint>
     <joint name="right_ur_arm_wrist_3_joint" type="revolute">
@@ -759,7 +759,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <child link="right_ur_arm_wrist_3_link" />
         <origin rpy="1.57079632659 3.14159265359 3.14159265359" xyz="0 0.0996 -2.04283014801e-11" />
         <axis xyz="0 0 1" />
-        <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" />
+        <limit effort="28.0" lower="-4.18879020479" upper="4.18879020479" velocity="3.14159265359" />
         <dynamics damping="0" friction="0" />
     </joint>
     <!-- ROS-Industrial 'base' frame: base_link to UR 'Base' Coordinates transform -->
@@ -1114,7 +1114,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <child link="left_ur_arm_wrist_1_link" />
         <origin rpy="0 0 0" xyz="-0.3922 0 0.1333" />
         <axis xyz="0 0 1" />
-        <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" />
+        <limit effort="28.0" lower="-4.18879020479" upper="4.18879020479" velocity="3.14159265359" />
+        <!-- <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
         <dynamics damping="0" friction="0" />
     </joint>
     <joint name="left_ur_arm_wrist_2_joint" type="revolute">
@@ -1122,7 +1123,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <child link="left_ur_arm_wrist_2_link" />
         <origin rpy="1.570796327 0 0" xyz="0 -0.0997 -2.0448811823e-11" />
         <axis xyz="0 0 1" />
-        <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" />
+        <limit effort="28.0" lower="-4.18879020479" upper="4.18879020479" velocity="3.14159265359" />
+        <!-- <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
         <dynamics damping="0" friction="0" />
     </joint>
     <joint name="left_ur_arm_wrist_3_joint" type="revolute">
@@ -1130,7 +1132,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <child link="left_ur_arm_wrist_3_link" />
         <origin rpy="1.57079632659 3.14159265359 3.14159265359" xyz="0 0.0996 -2.04283014801e-11" />
         <axis xyz="0 0 1" />
-        <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" />
+        <limit effort="28.0" lower="-4.18879020479" upper="4.18879020479" velocity="3.14159265359" />
+        <!-- <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
         <dynamics damping="0" friction="0" />
     </joint>
     <!-- ROS-Industrial 'base' frame: base_link to UR 'Base' Coordinates transform -->
