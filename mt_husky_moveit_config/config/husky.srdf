@@ -100,6 +100,8 @@
     <disable_collisions link1="top_plate_link" link2="ur_arm_shoulder_link" reason="Never" />
     <disable_collisions link1="ipad_rack_link" link2="ur_arm_base_link_inertia" reason="Adjacent" />
     <disable_collisions link1="ipad_rack_link" link2="ur_arm_shoulder_link" reason="Never" />
+    <disable_collisions link1="ipad_rack_link" link2="top_plate_link" reason="Adjacent" />
+
     <!-- experiemental -->
     <disable_collisions link1="ipad_rack_link" link2="ur_arm_upper_arm_link" reason="Never" />
 
