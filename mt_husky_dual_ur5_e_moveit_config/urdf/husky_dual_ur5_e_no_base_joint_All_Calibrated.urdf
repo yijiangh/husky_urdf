@@ -415,10 +415,15 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <child link="left_ur_arm_base_link" />
         <origin rpy="0 0 0" xyz="0 0 0" />
     </joint>
-    <joint name="right_arm_mount_joint" type="fixed">
+    <!-- <joint name="right_arm_mount_joint" type="fixed">
         <parent link="right_arm_bulkhead_link" />
         <child link="right_ur_arm_base_link" />
         <origin rpy="0 0 0" xyz="0 0 0" />
+    </joint> -->
+    <joint name="right_arm_mount_joint" type="fixed">
+        <parent link="right_arm_bulkhead_link" />
+        <child link="right_ur_arm_base_link" />
+        <origin rpy="0.005849556200320057 -0.004160215708736291 -0.0035193052610289406" xyz="0.0011497288942337036 -0.0006287879659794271 0.002082839608192444" />
     </joint>
 
     <!--
@@ -715,25 +720,25 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <joint name="right_ur_arm_shoulder_pan_joint" type="revolute">
         <parent link="right_ur_arm_base_link_inertia" />
         <child link="right_ur_arm_shoulder_link" />
-        <origin rpy="0 0 0" xyz="0 0 0.1625" />
+        <origin rpy="0 0 0" xyz="0 0 0.1627782525221701" />
         <axis xyz="0 0 1" />
-        <limit effort="150.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.14159265359" />
+        <limit effort="150.0" lower="-4.71238898038" upper="4.71238898038" velocity="3.14159265359" />
         <!-- <limit effort="150.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
         <dynamics damping="0" friction="0" />
     </joint>
     <joint name="right_ur_arm_shoulder_lift_joint" type="revolute">
         <parent link="right_ur_arm_shoulder_link" />
         <child link="right_ur_arm_upper_arm_link" />
-        <origin rpy="1.570796327 0 0" xyz="0 0 0" />
+        <origin rpy="1.5703872163784984 0 -0.0000044300287598275637" xyz="0.00017951387097150235 0 0" />
         <axis xyz="0 0 1" />
         <!-- <limit effort="150.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
-        <limit effort="150.0" lower="-3.14159265359" upper="0.3" velocity="3.14159265359" />
+        <limit effort="150.0" lower="-4.71238898038" upper="4.71238898038" velocity="3.14159265359" />
         <dynamics damping="0" friction="0" />
     </joint>
     <joint name="right_ur_arm_elbow_joint" type="revolute">
         <parent link="right_ur_arm_upper_arm_link" />
         <child link="right_ur_arm_forearm_link" />
-        <origin rpy="0 0 0" xyz="-0.425 0 0" />
+        <origin rpy="0.000017598778356909152 -0.0017646390504777454 0.000022896679262627857" xyz="-0.42484922240722683 0 0" />
         <axis xyz="0 0 1" />
         <limit effort="150.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.14159265359" />
         <dynamics damping="0" friction="0" />
@@ -741,7 +746,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <joint name="right_ur_arm_wrist_1_joint" type="revolute">
         <parent link="right_ur_arm_forearm_link" />
         <child link="right_ur_arm_wrist_1_link" />
-        <origin rpy="0 0 0" xyz="-0.3922 0 0.1333" />
+        <origin rpy="0.0059745562860579046 -0.0017403184893875676 -0.000012182431672809177" xyz="-0.39267466285441494 -0.0007932258609161224 0.13276574606781064" />
         <axis xyz="0 0 1" />
         <limit effort="28.0" lower="-4.18879020479" upper="4.18879020479" velocity="3.14159265359" />
         <dynamics damping="0" friction="0" />
@@ -749,7 +754,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <joint name="right_ur_arm_wrist_2_joint" type="revolute">
         <parent link="right_ur_arm_wrist_1_link" />
         <child link="right_ur_arm_wrist_2_link" />
-        <origin rpy="1.570796327 0 0" xyz="0 -0.0997 -2.0448811823e-11" />
+        <origin rpy="1.569260830273018 0 0.00000037474165375667162" xyz="-0.000057633117397977084 -0.099557455213209314 0.00015287024635024139" />
         <axis xyz="0 0 1" />
         <limit effort="28.0" lower="-4.18879020479" upper="4.18879020479" velocity="3.14159265359" />
         <dynamics damping="0" friction="0" />
@@ -757,7 +762,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <joint name="right_ur_arm_wrist_3_joint" type="revolute">
         <parent link="right_ur_arm_wrist_2_link" />
         <child link="right_ur_arm_wrist_3_link" />
-        <origin rpy="1.57079632659 3.14159265359 3.14159265359" xyz="0 0.0996 -2.04283014801e-11" />
+        <origin rpy="1.5728303578162324 3.1415926535897931 3.1415917754729397" xyz="0.000058942281949617339 0.099514048224567206 0.00020241494029680382" />
         <axis xyz="0 0 1" />
         <limit effort="28.0" lower="-4.18879020479" upper="4.18879020479" velocity="3.14159265359" />
         <dynamics damping="0" friction="0" />
@@ -1086,25 +1091,25 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <joint name="left_ur_arm_shoulder_pan_joint" type="revolute">
         <parent link="left_ur_arm_base_link_inertia" />
         <child link="left_ur_arm_shoulder_link" />
-        <origin rpy="0 0 0" xyz="0 0 0.1625" />
+        <origin rpy="0 0 0" xyz="0 0 0.16257807277263761" />
         <axis xyz="0 0 1" />
-        <limit effort="150.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.14159265359" />
+        <limit effort="150.0" lower="-4.71238898038" upper="4.71238898038" velocity="3.14159265359" />
         <!-- <limit effort="150.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
         <dynamics damping="0" friction="0" />
     </joint>
     <joint name="left_ur_arm_shoulder_lift_joint" type="revolute">
         <parent link="left_ur_arm_shoulder_link" />
         <child link="left_ur_arm_upper_arm_link" />
-        <origin rpy="1.570796327 0 0" xyz="0 0 0" />
+        <origin rpy="1.5713901981958054 0 -0.0000026681008682416518" xyz="0.00019007197441139241 0 0" />
         <axis xyz="0 0 1" />
-        <limit effort="150.0" lower="-3.14159265359" upper="0.3" velocity="3.14159265359" />
+        <limit effort="150.0" lower="-4.71238898038" upper="4.71238898038" velocity="3.14159265359" />
         <!-- <limit effort="150.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
         <dynamics damping="0" friction="0" />
     </joint>
     <joint name="left_ur_arm_elbow_joint" type="revolute">
         <parent link="left_ur_arm_upper_arm_link" />
         <child link="left_ur_arm_forearm_link" />
-        <origin rpy="0 0 0" xyz="-0.425 0 0" />
+        <origin rpy="0.00053885028029254363 -0.00088899660595502864 -0.0000090893692096143134" xyz="-0.42492076346025309 0 0" />
         <axis xyz="0 0 1" />
         <limit effort="150.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.14159265359" />
         <dynamics damping="0" friction="0" />
@@ -1112,7 +1117,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <joint name="left_ur_arm_wrist_1_joint" type="revolute">
         <parent link="left_ur_arm_forearm_link" />
         <child link="left_ur_arm_wrist_1_link" />
-        <origin rpy="0 0 0" xyz="-0.3922 0 0.1333" />
+        <origin rpy="0.0067969386915389153 0.0021092387583197063 -0.0000069072557868343565" xyz="-0.39208100648997279 -0.00090760192761138176 0.13352893003432456" />
         <axis xyz="0 0 1" />
         <limit effort="28.0" lower="-4.18879020479" upper="4.18879020479" velocity="3.14159265359" />
         <!-- <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
@@ -1121,7 +1126,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <joint name="left_ur_arm_wrist_2_joint" type="revolute">
         <parent link="left_ur_arm_wrist_1_link" />
         <child link="left_ur_arm_wrist_2_link" />
-        <origin rpy="1.570796327 0 0" xyz="0 -0.0997 -2.0448811823e-11" />
+        <origin rpy="1.5707223958750225 0 -0.00000021941801741677536" xyz="0.00013627350480989177 -0.099746834502379381 0.0000073743752427287777" />
         <axis xyz="0 0 1" />
         <limit effort="28.0" lower="-4.18879020479" upper="4.18879020479" velocity="3.14159265359" />
         <!-- <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
@@ -1130,7 +1135,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <joint name="left_ur_arm_wrist_3_joint" type="revolute">
         <parent link="left_ur_arm_wrist_2_link" />
         <child link="left_ur_arm_wrist_3_link" />
-        <origin rpy="1.57079632659 3.14159265359 3.14159265359" xyz="0 0.0996 -2.04283014801e-11" />
+        <origin rpy="1.5709810019899699 3.1415926535897931 -3.1415925563992939" xyz="0.000025819376543512202 0.099466410942852038 0.000018368979052949448" />
         <axis xyz="0 0 1" />
         <limit effort="28.0" lower="-4.18879020479" upper="4.18879020479" velocity="3.14159265359" />
         <!-- <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
