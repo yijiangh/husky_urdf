@@ -722,7 +722,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <child link="right_ur_arm_shoulder_link" />
         <origin rpy="0 0 0" xyz="0 0 0.1627782525221701" />
         <axis xyz="0 0 1" />
-        <limit effort="150.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.14159265359" />
+        <limit effort="150.0" lower="-4.71238898038" upper="4.71238898038" velocity="3.14159265359" />
         <!-- <limit effort="150.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
         <dynamics damping="0" friction="0" />
     </joint>
@@ -732,7 +732,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <origin rpy="1.5703872163784984 0 -0.0000044300287598275637" xyz="0.00017951387097150235 0 0" />
         <axis xyz="0 0 1" />
         <!-- <limit effort="150.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
-        <limit effort="150.0" lower="-3.14159265359" upper="0.3" velocity="3.14159265359" />
+        <limit effort="150.0" lower="-4.71238898038" upper="4.71238898038" velocity="3.14159265359" />
         <dynamics damping="0" friction="0" />
     </joint>
     <joint name="right_ur_arm_elbow_joint" type="revolute">
@@ -1093,7 +1093,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <child link="left_ur_arm_shoulder_link" />
         <origin rpy="0 0 0" xyz="0 0 0.16257807277263761" />
         <axis xyz="0 0 1" />
-        <limit effort="150.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.14159265359" />
+        <limit effort="150.0" lower="-4.71238898038" upper="4.71238898038" velocity="3.14159265359" />
         <!-- <limit effort="150.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
         <dynamics damping="0" friction="0" />
     </joint>
@@ -1102,7 +1102,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
         <child link="left_ur_arm_upper_arm_link" />
         <origin rpy="1.5713901981958054 0 -0.0000026681008682416518" xyz="0.00019007197441139241 0 0" />
         <axis xyz="0 0 1" />
-        <limit effort="150.0" lower="-3.14159265359" upper="0.3" velocity="3.14159265359" />
+        <limit effort="150.0" lower="-4.71238898038" upper="4.71238898038" velocity="3.14159265359" />
         <!-- <limit effort="150.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.14159265359" /> -->
         <dynamics damping="0" friction="0" />
     </joint>
