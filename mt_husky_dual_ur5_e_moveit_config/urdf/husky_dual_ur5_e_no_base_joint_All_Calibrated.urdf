@@ -413,6 +413,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <joint name="left_arm_mount_joint" type="fixed">
         <parent link="left_arm_bulkhead_link" />
         <child link="left_ur_arm_base_link" />
+        <!-- * The arm's mounting on the robot (its turn, and the measured mount calibration) goes here, not in the 180 deg joints below left_ur_arm_base_link. -->
         <origin rpy="0 0 0" xyz="0 0 0" />
     </joint>
     <!-- <joint name="right_arm_mount_joint" type="fixed">
@@ -423,6 +424,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <joint name="right_arm_mount_joint" type="fixed">
         <parent link="right_arm_bulkhead_link" />
         <child link="right_ur_arm_base_link" />
+        <!-- * The arm's mounting on the robot (its turn, and the measured mount calibration) goes here, not in the 180 deg joints below right_ur_arm_base_link. -->
         <origin rpy="0.005849556200320057 -0.004160215708736291 -0.0035193052610289406" xyz="0.0011497288942337036 -0.0006287879659794271 0.002082839608192444" />
     </joint>
 
@@ -715,6 +717,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
            Use the joint between 'base_link' and 'base_link_inertia' (a dummy
            link/frame) to introduce the necessary rotation over Z (of pi rad).
       --> 
+        <!-- ! Keep rpy="0 0 pi" (180 deg): the stock UR convention, so right_ur_arm_base_link stays the frame the arm's controller calls base_link. Put the arm's mounting turn and mount calibration in right_arm_mount_joint (above right_ur_arm_base_link), never here. Why: husky-assembly-teleop doc/ur_frames.md -->
         <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
     </joint>
     <joint name="right_ur_arm_shoulder_pan_joint" type="revolute">
@@ -776,7 +779,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
            the UR controller.
       -->
         <!-- <origin rpy="0 0 3.14159265359" xyz="0 0 0" /> -->
-        <origin rpy="0 0 -1.570796326795" xyz="0 0 0" />
+        <!-- ! Keep rpy="0 0 pi" (180 deg): the stock UR convention, so right_ur_arm_base_link stays the frame the arm's controller calls base_link. Put the arm's mounting turn and mount calibration in right_arm_mount_joint (above right_ur_arm_base_link), never here. Why: husky-assembly-teleop doc/ur_frames.md -->
+        <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
         <parent link="right_ur_arm_base_link" />
         <child link="right_ur_arm_base" />
     </joint>
@@ -1086,6 +1090,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
            link/frame) to introduce the necessary rotation over Z (of pi rad).
       -->
         <!-- <origin rpy="0 0 -1.570796326795" xyz="0 0 0" /> -->
+        <!-- ! Keep rpy="0 0 pi" (180 deg): the stock UR convention, so left_ur_arm_base_link stays the frame the arm's controller calls base_link. Put the arm's mounting turn and mount calibration in left_arm_mount_joint (above left_ur_arm_base_link), never here. Why: husky-assembly-teleop doc/ur_frames.md -->
         <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
     </joint>
     <joint name="left_ur_arm_shoulder_pan_joint" type="revolute">
@@ -1149,6 +1154,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
            to correctly align 'base' with the 'Base' coordinate system of
            the UR controller.
       -->
+        <!-- ! Keep rpy="0 0 pi" (180 deg): the stock UR convention, so left_ur_arm_base_link stays the frame the arm's controller calls base_link. Put the arm's mounting turn and mount calibration in left_arm_mount_joint (above left_ur_arm_base_link), never here. Why: husky-assembly-teleop doc/ur_frames.md -->
         <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
         <parent link="left_ur_arm_base_link" />
         <child link="left_ur_arm_base" />

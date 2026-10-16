@@ -6,7 +6,9 @@
   <joint name="arm_mount_joint" type="fixed">
     <parent link="top_plate_front_link" />
     <child link="ur_arm_base_link" />
-    <origin xyz="$(optenv HUSKY_UR_XYZ -0.105 0.0 0.0)" rpy="$(optenv HUSKY_UR_RPY 0 0 3.1415927)"/>
+    <!-- The arm sits turned 90 deg on the top plate; that turn belongs here, never in the joints below
+         ur_arm_base_link (stock rpy 0 0 pi in ur_macro.xacro). -->
+    <origin xyz="$(optenv HUSKY_UR_XYZ -0.105 0.0 0.0)" rpy="$(optenv HUSKY_UR_RPY 0 0 -1.5707963)"/>
   </joint>
 
   <xacro:ur5e_robot prefix="ur_arm_" />

@@ -439,7 +439,8 @@
     <joint name="arm_mount_joint" type="fixed">
         <parent link="top_plate_front_link" />
         <child link="ur_arm_base_link" />
-        <origin rpy="0 0 3.1415927" xyz="-0.105 0.0 0.0" />
+        <!-- * The arm's mounting on the robot (its turn, and the measured mount calibration) goes here, not in the 180 deg joints below ur_arm_base_link. -->
+        <origin rpy="0 0 -1.57079628038" xyz="-0.105 0.0 0.0" />
     </joint>
     <!--
     Base UR robot series xacro macro.
@@ -738,7 +739,8 @@
            link/frame) to introduce the necessary rotation over Z (of pi rad).
       -->
         <!-- <origin rpy="0 0 3.14159265359" xyz="0 0 0" /> -->
-        <origin rpy="0 0 -1.570796326795" xyz="0 0 0" />
+        <!-- ! Keep rpy="0 0 pi" (180 deg): the stock UR convention, so ur_arm_base_link stays the frame the arm's controller calls base_link. Put the arm's mounting turn and mount calibration in arm_mount_joint (above ur_arm_base_link), never here. Why: husky-assembly-teleop doc/ur_frames.md -->
+        <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
     </joint>
     <joint name="ur_arm_shoulder_pan_joint" type="revolute">
         <parent link="ur_arm_base_link_inertia" />
@@ -797,7 +799,8 @@
            the UR controller.
       -->
         <!-- <origin rpy="0 0 3.14159265359" xyz="0 0 0" /> -->
-        <origin rpy="0 0 -1.570796326795" xyz="0 0 0" />
+        <!-- ! Keep rpy="0 0 pi" (180 deg): the stock UR convention, so ur_arm_base_link stays the frame the arm's controller calls base_link. Put the arm's mounting turn and mount calibration in arm_mount_joint (above ur_arm_base_link), never here. Why: husky-assembly-teleop doc/ur_frames.md -->
+        <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
         <parent link="ur_arm_base_link" />
         <child link="ur_arm_base" />
     </joint>
