@@ -383,6 +383,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                 <mesh filename="package://husky_ur_description/meshes/dual_arm_bulkhead_collision.stl" />
             </geometry>
         </collision>
+        <collision>
+            <!-- iPad at the back, between the arms: its holder's tilt, 21 x 29 cm like the single-arm robots' iPad,
+                 6 cm thick (holder and 1 cm margin) -->
+            <origin rpy="0 -0.2618 0" xyz="-0.3456 -0.0009 0.1988" />
+            <geometry><box size="0.21 0.29 0.06" /></geometry>
+        </collision>
         
 <inertial>
             <mass value="0.1" />

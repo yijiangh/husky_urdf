@@ -57,12 +57,13 @@
                 <mesh filename="package://husky_description/meshes/base_link.stl" />
             </geometry>
         </visual>
-        <!-- <collision>
+        <collision>
+            <!-- floor box: the bottom of the chassis and both bumpers -->
             <origin rpy="0 0 0" xyz="0.0 0 0.061875" />
             <geometry>
                 <box size="0.9874 0.5709 0.12375" />
             </geometry>
-        </collision> -->
+        </collision>
         <collision>
             <origin rpy="0 0 0" xyz="0 0 0.175625" />
             <geometry>
@@ -346,11 +347,35 @@
                 <mesh filename="package://husky_description/meshes/ipad_rack_visual.obj" />
             </geometry>
         </visual>
+        <!--
+          Collisions: the visual mesh's parts with a 1 cm margin. The frame is one wall, the space between the legs
+          included; the bracing at each leg's foot is not in the visual mesh.
+          ? Bracing size is a guess (6 cm out from the leg, front and back, 6 cm tall) until measured.
+        -->
         <collision>
-            <origin rpy="0 0 0" xyz="0 0 0" />
-            <geometry>
-                <mesh filename="package://husky_description/meshes/ipad_rack_collision.obj" />
-            </geometry>
+            <!-- frame: legs, crossbar and the space between them -->
+            <origin rpy="0 0 0" xyz="-0.3775 -0.00875 0.2717" />
+            <geometry><box size="0.06 0.5475 0.53" /></geometry>
+        </collision>
+        <collision>
+            <!-- bracing, -y leg -->
+            <origin rpy="0 0 0" xyz="-0.3775 -0.2625 0.0417" />
+            <geometry><box size="0.18 0.04 0.07" /></geometry>
+        </collision>
+        <collision>
+            <!-- bracing, +y leg -->
+            <origin rpy="0 0 0" xyz="-0.3775 0.245 0.0417" />
+            <geometry><box size="0.18 0.04 0.07" /></geometry>
+        </collision>
+        <collision>
+            <!-- iPad in its holder, tilted like the visual: 18 x 26 cm grown to 21 x 29 x 4 cm -->
+            <origin rpy="0 -0.2744 0" xyz="-0.3616 -0.0087 0.5394" />
+            <geometry><box size="0.21 0.29 0.04" /></geometry>
+        </collision>
+        <collision>
+            <!-- e-stop: housing and the rod on it -->
+            <origin rpy="0 0 0" xyz="-0.4125 0.22 0.5481" />
+            <geometry><box size="0.05 0.09 0.17" /></geometry>
         </collision>
     </link>
     <!-- <link name="user_rail_link">
